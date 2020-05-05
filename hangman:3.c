@@ -3,7 +3,7 @@
 
 void print_menu()
 {
-    system("cls"); // очищаем экран
+    system("clear"); // очищаем экран
     printf("What do you whant to do ?\n");
     printf("1. Start game\n");
     printf("2. Description\n");
