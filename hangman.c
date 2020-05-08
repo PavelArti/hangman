@@ -130,7 +130,7 @@ int hangman()
         printf("%s", enterLetter);
         printf("\nEnter a leter: ");
         scanChar = getchar();
-        getchar();
+        //getchar(); Решить с Валерой 
         if (!((((int)scanChar >= -64 && (int)scanChar <= -33)
                || (int)scanChar == -88)
               || (((int)scanChar >= -32 && (int)scanChar <= -1)
