@@ -15,7 +15,7 @@ void print_menu()
 }
 void print_word()
 {
-    printf("Hangman is a classic word game in which you must guess the secret word one letter at a time.\nHangman is a classic word game in which you must guess the secret word one letter at a time.\n Challenge friends from Facebook, Twitter, Google+ or The Free Dictionary\n");
+    printf("Hangman is a classic word game in which you must guess the secret word one letter at a time.\nChallenge friends from Facebook, Twitter, Google+ or The Free Dictionary\n");
 }
 void print_list()
 {
