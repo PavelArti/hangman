@@ -1,3 +1,4 @@
 *.o
 /.clang-format
 /hangman.o
+/main64.exe
