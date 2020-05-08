@@ -15,11 +15,11 @@ void print_menu()
 }
 void print_word()
 {
-    printf("Виселица это хорошо я оформлю текст позже\n");
+    printf("Hangman is a classic word game in which you must guess the secret word one letter at a time.\nHangman is a classic word game in which you must guess the secret word one letter at a time.\n Challenge friends from Facebook, Twitter, Google+ or The Free Dictionary\n");
 }
 void print_list()
 {
-    printf("Список команд потом оформлю\n");
+    printf("Exit- go back to menu\n");
 }
 
 int get_variant(int count)
@@ -83,7 +83,7 @@ int hangman()
     srand(time(NULL));
     if (!(txt
           = fopen("slova.txt", "r"))) { // проверяем открыт ли файл со словами
-        printf("Ошибка открытия файла!");
+        printf("Error file not open!");
         return 1;
     }
     while (fscanf(txt, "%s", &buffer)
@@ -112,7 +112,7 @@ int hangman()
         if (guessChar
             == 0) { // если количество неотгаданных букв = 0, то победа
             printf("%s", word);
-            printf("\nВы победили!");
+            printf("\nYou win!");
             free(secretWord);
             getchar();
             return 0;
@@ -120,15 +120,15 @@ int hangman()
         if (number_of_mistakes == 9) { // если количество ошибочно отгаданных
                                        // букв = 9, то поражение
             printf("%s", word);
-            printf("\nВы проиграли(");
+            printf("\nYou lose(");
             free(secretWord);
             getchar();
             return 0;
         }
         printf("%s", secretWord);
-        printf("\nВведённые буквы:\n");
+        printf("\nThe letter:\n");
         printf("%s", enterLetter);
-        printf("\nВведите букву: ");
+        printf("\nEnter a leter: ");
         scanChar = getchar();
         getchar();
         if (!((((int)scanChar >= -64 && (int)scanChar <= -33)
