@@ -76,10 +76,11 @@ int hangman()
     system("chcp 1251");
     system("cls");
     FILE* txt;
-    char word[80], enterLetter[33] = {0}, scanChar;
+    char word[80], scanChar;
     double buffer;
     int i, flag = 0, sizeFile = 0, rndStr, sizeWord, guessChar,
            number_of_mistakes = 0, countLetter = 0;
+           char enterLetter[33] = {0};
     srand(time(NULL));
     if (!(txt
           = fopen("slova.txt", "r"))) { // проверяем открыт ли файл со словами
@@ -102,6 +103,7 @@ int hangman()
             sizeof(char)); // динамически задаём второй массив, в котором будут
                            // показываться отк=гаданные буквы
     memset(secretWord, '_', sizeWord); // заполняем его нижними подчёркиваниями
+    memset(enterLetter, '_', 9 + sizeWord);
     guessChar = sizeWord;
     while (guessChar >= 0 && number_of_mistakes <= 9) {
         if (flag == 1) {
@@ -130,7 +132,7 @@ int hangman()
         printf("%s", enterLetter);
         printf("\nEnter a leter: ");
         scanChar = getchar();
-        //getchar(); Решить с Валерой 
+        getchar();
         if (!((((int)scanChar >= -64 && (int)scanChar <= -33)
                || (int)scanChar == -88)
               || (((int)scanChar >= -32 && (int)scanChar <= -1)
