@@ -19,7 +19,7 @@ void print_word()
 }
 void print_list()
 {
-    printf("Exit- go back to menu\n");
+    printf("GO- start game\n");
 }
 
 int get_variant(int count)
