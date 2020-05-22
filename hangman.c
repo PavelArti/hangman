@@ -130,7 +130,7 @@ int hangman()
         printf("%s", secretWord);
         printf("\nThe letter:\n");
         printf("%s", enterLetter);
-        printf("\n(Write GO to start gam)Enter a leter: ");
+        printf("\n(Write GO to start game)Enter a leter: ");
         scanChar = getchar();
         getchar();
         if (!((((int)scanChar >= -64 && (int)scanChar <= -33)
