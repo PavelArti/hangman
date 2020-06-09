@@ -38,40 +38,32 @@ int get_variant(int count)
     }
     return variant;
 }
-void print_hang(int number_of_mistakes)
+void PrintHang(int i)
 {
-    switch (number_of_mistakes) {
-    case 9:
+    system("clear");
+    switch (i) {
+    case 6:
         printf("  ____ \n |   | |\n |   O |\n |  /|\\|\n_|_ / \\|  \n\n");
         break;
-    case 8:
+    case 5:
         printf("  ____ \n |   | |\n |   O |\n |  /|\\|\n_|_ /  |  \n\n");
         break;
-    case 7:
+    case 4:
         printf("  ____ \n |   | |\n |   O |\n |  /|\\|\n_|_    |  \n\n");
         break;
-    case 6:
+    case 3:
         printf("  ____ \n |   | |\n |   O |\n |  /| |\n_|_    |  \n\n");
         break;
-    case 5:
+    case 2:
         printf("  ____ \n |   | |\n |   O |\n |   | |\n_|_    |  \n\n");
         break;
-    case 4:
-        printf("  ____ \n |   | |\n |   O |\n |     |\n_|_    |  \n\n");
-        break;
-    case 3:
+    case 1:
         printf("  ____ \n |     |\n |     |\n |     |\n_|_    |  \n\n");
         break;
-    case 2:
-        printf("       \n |     |\n |     |\n |     |\n_|_    |  \n\n");
-        break;
-    case 1:
+    case 0:
         printf("       \n       |\n       |\n       |\n___    |  \n\n");
         break;
-    case 0:
-        printf("       \n       |\n       |\n       |\n       |  \n\n");
-        break;
-    };
+    }
 }
 void hangman()
 {
