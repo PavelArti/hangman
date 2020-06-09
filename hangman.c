@@ -11,8 +11,7 @@ void print_menu()
     printf("What do you whant to do ?\n");
     printf("1. Start game\n");
     printf("2. Description\n");
-    printf("3. Command list\n");
-    printf("4. Exit\n");
+    printf("3. Exit\n");
     printf(">");
 }
 void print_word()
@@ -20,10 +19,6 @@ void print_word()
     printf("Hangman is a classic word game in which you must guess the secret "
            "word one letter at a time.\nChallenge friends from Facebook, "
            "Twitter, Google+ or The Free Dictionary (Wait 10 seconds)\n");
-}
-void print_list()
-{
-    printf("GO- start game (Wait 3 seconds)\n");
 }
 int get_variant(int count)
 {
@@ -140,7 +135,7 @@ int main()
     int variant; // выбранный пункт меню
     do {
         print_menu(); // выводим меню на экран
-        variant = get_variant(5); // получаем номер выбранного пункта меню
+        variant = get_variant(3); // получаем номер выбранного пункта меню
         switch (variant) {
         case 1:
             hangman();
@@ -148,18 +143,13 @@ int main()
         case 2:
             print_word();
             break;
-        case 3:
-            print_list();
-            break;
         }
-        if (variant != 4) {
+        if (variant != 3) {
             if (variant == 2)
                 sleep(10);
-            if (variant == 3)
-                sleep(3);
         } else {
             return 0;
         };
-    } while (variant != 4);
+    } while (variant != 3);
     return 0;
 }
